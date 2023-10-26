@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            Projekti: TypeScript, Webgl(Three.js), Socket.IO, Node.js, Express
+        </title>
+        <style>
+            body {
+                overflow: hidden;
+                margin: 0px;
+            }
+
+            #pingStats {
+                position: absolute;
+                top: 60px;
+                left: 4px;
+                width: 400px;
+                height: 400px;
+                pointer-events: none;
+                color: white;
+                font-family: monospace;
+            }
+
+            .chatBox
+            {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                width: 400px;
+                height: 200px;
+                background-color: rgba(0, 0, 0, 0.4);       
+            }
+            #messageClass
+            {
+                padding: 5px;
+            }
+            .message
+            {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                width: 90%;            
+            }
+            #messages
+            {
+            padding-inline-start: 0px;
+            padding: 5px;
+            margin: 0px;
+                
+            }
+            .col-2
+            {
+                height: 158px ;
+                overflow:hidden;
+                overflow-y:scroll;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            #messageBox
+            {
+                width: 84%;                          
+            }
+            #but1
+            {
+                position: absolute;
+                right:0%;
+                width: 14%;            
+            }
+            #messages
+            {
+                word-wrap: break-word; 
+                color:white;                
+            }
+
+
+
+
+
+            
+
+            </style>
+    </head>
+
+    <body>
+        <div class="chatBox">
+            <form class="row" id="messageClass" onSubmit="return false;">
+                <div class="message">
+                    <input  id="messageBox" type="text" autocomplete="off" placeholder="Enter your message."/>
+                    <input class="btn btn-primary" id="but1" type="button" value="Send!" />
+                    
+                </div>
+                <div class="col-2">
+                <ul id="messages" style="list-style-type:none;">
+                    
+
+                </ul>
+                </div>
+            </form>
+        </div>
+        
+        <div id="pingStats"></div>
+        <script type="module" src="bundle.js"></script>
+
+    </body>
+</html>
